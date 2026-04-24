@@ -26,9 +26,9 @@ const config = {
   baseUrl: '/',
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'fairpm', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  organizationName: 'fairpm',
+  projectName: 'docs',
+  deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
 
