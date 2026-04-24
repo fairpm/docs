@@ -1,2 +1,2 @@
 # docs
-Docusarus Home
+docusaurus Home
