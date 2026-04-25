@@ -28,7 +28,7 @@ const config = {
   // GitHub pages deployment config.
   organizationName: 'fairpm',
   projectName: 'docs',
-  deploymentBranch: 'gh-pages',
+  deploymentBranch: 'main',
 
   onBrokenLinks: 'throw',
 
