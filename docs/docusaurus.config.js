@@ -20,14 +20,14 @@ const config = {
   },
 
   // Set the production url of your site here
-  // url: 'https://docs.fair.pm',
+  url: 'https://docs.fair.pm',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  // baseUrl: '/',
+  baseUrl: '/',
 
   // Trying to get build instead of src
-  url: 'https://fairpm.github.io/',
-  baseUrl: '/docs/',
+  // url: 'https://fairpm.github.io/',
+  // baseUrl: '/docs/',
 
   // GitHub pages deployment config.
   organizationName: 'fairpm',
@@ -108,7 +108,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/',
+                to: '/',
               },
             ],
           },
