@@ -25,17 +25,12 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
-  // Trying to get build instead of src
-  // url: 'https://fairpm.github.io/',
-  // baseUrl: '/docs/',
-
   // GitHub pages deployment config.
   organizationName: 'fairpm',
   projectName: 'docs',
   deploymentBranch: 'gh-pages',
 
-  onBrokenLinks: 'log',
-
+  onBrokenLinks: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
