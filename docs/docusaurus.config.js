@@ -11,8 +11,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'FAIR Documentation',
-  tagline: 'Docs are way too cool!!',
-  favicon: 'img/favicon.ico',
+  tagline: 'Welcome to the FAIR Package Manager Project documentation.',
+  // favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -75,22 +75,36 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'My Site',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
+        title: 'FAIR Documentation',
+        // logo: {
+        //   alt: 'My Site Logo',
+        //   src: 'img/logo.svg',
+        // },
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            to: '/blog',
+            label: 'Blog',
+            position: 'left'
+          },
+          {
+            to: 'docs/contributing',
+            label: 'Get involved',
+            position: 'left'
+          },
           {
             href: 'https://github.com/fairpm/docs',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            href: 'https://fair.pm/',
+            label: 'fair.pm',
             position: 'right',
           },
         ],
@@ -102,8 +116,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/',
+                label: 'About this documentation',
+                to: 'about',
+              },
+              {
+                label: 'Docs GitHub repo',
+                href: 'https://github.com/fairpm/docs',
               },
             ],
           },
@@ -111,16 +129,16 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Slack instance',
+                href: 'https://chat.fair.pm/',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Join meetings',
+                href: 'https://zoom-lfx.platform.linuxfoundation.org/meetings/fair-package-manager?view=month',
               },
               {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'GitHub organisation',
+                href: 'https://github.com/fairpm',
               },
             ],
           },
@@ -132,13 +150,13 @@ const config = {
                 to: '/blog',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/fairpm/docs',
+                label: 'fair.pm',
+                href: 'https://fair.pm/',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} FAIR. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

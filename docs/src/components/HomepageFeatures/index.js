@@ -4,32 +4,32 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'FAIR',
+    Svg: require('@site/static/img/globe.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        <p>FAIR is an acronym for Federated And Independent Repositories.</p>
+        <p>The FAIR Package Manager is an open-source initiative of The FAIR Web Foundation, a Linux Foundation project.</p>
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Technology',
+    Svg: require('@site/static/img/networking.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        <p>Decentralized alternative for distributing your project dependencies.</p>
+        <p>Everything is package if you're FAIR enough.</p>
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Security, Privacy & GDPR',
+    Svg: require('@site/static/img/superhero.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        <p>FAIR is designed to improve user privacy by reducing unnecessary tracking and central data collection.</p>
+        <p>Using signing and authentication, FAIR mitigates unapproved takeovers or nulling of your website dependencies, restoring trust in deliverables.</p>
       </>
     ),
   },
@@ -41,9 +41,9 @@ function Feature({Svg, title, description}) {
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className="text--center padding-horiz--lg">
         <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+        <div>{description}</div>
       </div>
     </div>
   );
