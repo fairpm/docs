@@ -77,7 +77,7 @@ const config = {
       navbar: {
         title: 'FAIR Documentation',
         // logo: {
-        //   alt: 'My Site Logo',
+        //   alt: 'FAIR Logo',
         //   src: 'img/logo.svg',
         // },
         items: [
