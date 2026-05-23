@@ -77,7 +77,7 @@ const config = {
       navbar: {
         title: 'FAIR Documentation',
         // logo: {
-        //   alt: 'My Site Logo',
+        //   alt: 'FAIR Logo',
         //   src: 'img/logo.svg',
         // },
         items: [
@@ -118,6 +118,10 @@ const config = {
               {
                 label: 'About this documentation',
                 to: 'about',
+              },
+              {
+                label: 'Found an issue? Report it here',
+                href: 'https://github.com/fairpm/docs/issues/new?template=website-issue.yml',
               },
               {
                 label: 'Docs GitHub repo',
