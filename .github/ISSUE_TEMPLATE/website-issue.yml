@@ -1,0 +1,50 @@
+# Report issues from the docs.fair.pm website
+
+name: Website problem
+description: Report a problem with the FAIR documentation website
+title: "[Website]: "
+labels: ["website", "documentation", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem with the FAIR docs website.
+
+  - type: dropdown
+    id: problem_type
+    attributes:
+      label: What kind of problem is this?
+      options:
+        - Accessibility issue
+        - Broken link
+        - Incorrect or outdated content
+        - Missing information
+        - Website bug
+        - Search/navigation problem
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: page_url
+    attributes:
+      label: Page URL
+      description: Paste the page where you noticed the problem.
+      placeholder: https://docs.fair.pm/...
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the issue or inquiry.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: false
