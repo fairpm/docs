@@ -120,6 +120,10 @@ const config = {
                 to: 'about',
               },
               {
+                label: 'Found an issue? Report it here',
+                href: 'https://github.com/fairpm/docs/issues/new?template=website-issue.yml',
+              },
+              {
                 label: 'Docs GitHub repo',
                 href: 'https://github.com/fairpm/docs',
               },
