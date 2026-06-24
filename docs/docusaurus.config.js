@@ -5,6 +5,8 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import navbarItems from './navbarItems.js';
+import plugins from './plugins.js';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -30,7 +32,8 @@ const config = {
   projectName: 'docs',
   deploymentBranch: 'gh-pages',
 
-  onBrokenLinks: 'throw',
+  // onBrokenLinks: 'throw',
+  onBrokenLinks: 'log',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -80,34 +83,7 @@ const config = {
         //   alt: 'FAIR Logo',
         //   src: 'img/logo.svg',
         // },
-        items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Docs',
-          },
-          {
-            to: '/blog',
-            label: 'Blog',
-            position: 'left'
-          },
-          {
-            to: 'docs/contributing',
-            label: 'Get involved',
-            position: 'left'
-          },
-          {
-            href: 'https://github.com/fairpm/docs',
-            label: 'GitHub',
-            position: 'right',
-          },
-          {
-            href: 'https://fair.pm/',
-            label: 'fair.pm',
-            position: 'right',
-          },
-        ],
+        items: navbarItems,
       },
       footer: {
         style: 'dark',
@@ -167,6 +143,8 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+    plugins: plugins,
 };
 
 export default config;

@@ -9,7 +9,7 @@ on:
 
   # Allow running this workflow manually from the Actions tab
   workflow_dispatch:
-  
+
 defaults:
   run:
     shell: bash
@@ -23,9 +23,31 @@ jobs:
     name: Test deployment
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Docusaurus site
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Checkout TSC faqs
+        uses: actions/checkout@v4
+        with:
+          repository: fairpm/tsc
+          path: docs/external/tsc/
+
+      - name: Debug checked out files
+        run: |
+          echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE"
+          echo "Current directory:"
+          pwd
+          echo "Repo root:"
+          ls -la "$GITHUB_WORKSPACE"
+          echo "Docs root:"
+          ls -la "$GITHUB_WORKSPACE/docs"
+          echo "External:"
+          find "$GITHUB_WORKSPACE/docs/external" -maxdepth 5 -type d -print || true
+          echo "Expected folder:"
+          ls -la "$GITHUB_WORKSPACE/docs/external/tsc/faqs" || true
+        working-directory: .
 
       - uses: actions/setup-node@v4
         with:
