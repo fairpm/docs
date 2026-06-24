@@ -6,7 +6,7 @@ const plugins = [
         '@docusaurus/plugin-content-docs',
         {
           id: 'tsc',
-          path: 'external/tsc/faq',
+          path: 'external/tsc/faqs',
           routeBasePath: 'tsc',
           sidebarPath: require.resolve('./sidebars-tsc.js'),
           editUrl: ({docPath}) =>

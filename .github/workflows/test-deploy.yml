@@ -46,7 +46,7 @@ jobs:
           echo "External:"
           find "$GITHUB_WORKSPACE/docs/external" -maxdepth 5 -type d -print || true
           echo "Expected folder:"
-          ls -la "$GITHUB_WORKSPACE/docs/external/tsc/faq" || true
+          ls -la "$GITHUB_WORKSPACE/docs/external/tsc/faqs" || true
         working-directory: .
 
       - uses: actions/setup-node@v4
