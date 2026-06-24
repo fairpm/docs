@@ -29,10 +29,10 @@ jobs:
           fetch-depth: 0
 
       - name: Checkout TSC faqs
-          uses: actions/checkout@v4
-          with:
-            repository: fairpm/tsc
-            path: external/tsc/faq
+        uses: actions/checkout@v4
+        with:
+          repository: fairpm/tsc
+          path: external/tsc/faq
 
       - uses: actions/setup-node@v4
         with:
