@@ -5,8 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
-import navbarItems from './navbarItems.js';
-import plugins from './plugins.js';
+import enabledDocs from './externalDocs.js';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -83,7 +82,41 @@ const config = {
         //   alt: 'FAIR Logo',
         //   src: 'img/logo.svg',
         // },
-        items: navbarItems,
+        items: [
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Docs',
+          },
+          {
+            to: '/blog',
+            label: 'Blog',
+            position: 'left'
+          },
+          {
+            to: 'docs/contributing',
+            label: 'Get involved',
+            position: 'left'
+          },
+          {
+            href: 'https://github.com/fairpm/docs',
+            label: 'GitHub',
+            position: 'right',
+          },
+          {
+            href: 'https://fair.pm/',
+            label: 'fair.pm',
+            position: 'right',
+          },
+          ...enabledDocs.map((docs) => ({
+            type: 'docSidebar',
+            sidebarId: docs.sidebarId,
+            docsPluginId: docs.id,
+            position: docs.navbarPosition,
+            label: docs.label,
+          })),
+      ],
       },
       footer: {
         style: 'dark',
@@ -144,7 +177,19 @@ const config = {
       },
     }),
 
-    plugins: plugins,
+    plugins: [
+      ...enabledDocs.map((docs) => [
+        '@docusaurus/plugin-content-docs',
+        {
+          id: docs.id,
+          path: docs.path,
+          routeBasePath: docs.routeBasePath,
+          sidebarPath: require.resolve(docs.sidebarPath),
+          editUrl: ({docPath}) =>
+            `docs.editUrl${docPath}`,
+        },
+      ]),
+    ],
 };
 
 export default config;
