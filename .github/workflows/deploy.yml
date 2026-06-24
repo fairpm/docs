@@ -6,7 +6,7 @@ on:
       - main
   # Allow running this workflow manually from the Actions tab
   workflow_dispatch:
-  
+
 defaults:
   run:
     shell: bash
@@ -23,6 +23,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Checkout TSC faqs
+        uses: actions/checkout@v4
+        with:
+          repository: fairpm/tsc
+          path: docs/external/tsc/
 
       - uses: actions/setup-node@v4
         with:
