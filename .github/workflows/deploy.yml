@@ -41,6 +41,8 @@ jobs:
 
       - name: Build website
         run: npm run build
+        env:
+          DOCS_EXTERNAL: tsc
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
