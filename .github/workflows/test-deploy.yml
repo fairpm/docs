@@ -34,6 +34,12 @@ jobs:
           repository: fairpm/tsc
           path: docs/external/tsc/
 
+      - name: Checkout Fair Beacon
+        uses: actions/checkout@v4
+        with:
+          repository: fairpm/fair-beacon
+          path: docs/external/fair-beacon/
+
       - name: Debug checked out files
         run: |
           echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE"
@@ -47,6 +53,7 @@ jobs:
           find "$GITHUB_WORKSPACE/docs/external" -maxdepth 5 -type d -print || true
           echo "Expected folder:"
           ls -la "$GITHUB_WORKSPACE/docs/external/tsc/faqs" || true
+          ls -la "$GITHUB_WORKSPACE/docs/external/fair-beacon/" || true
         working-directory: .
 
       - uses: actions/setup-node@v4
@@ -61,4 +68,4 @@ jobs:
       - name: Build website
         run: npm run build
         env:
-          DOCS_EXTERNAL: tsc
+          DOCS_EXTERNAL: tsc,fair-beacon

@@ -30,6 +30,12 @@ jobs:
           repository: fairpm/tsc
           path: docs/external/tsc/
 
+      - name: Checkout Fair Beacon
+        uses: actions/checkout@v4
+        with:
+          repository: fairpm/fair-beacon
+          path: docs/external/fair-beacon/
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
@@ -42,7 +48,7 @@ jobs:
       - name: Build website
         run: npm run build
         env:
-          DOCS_EXTERNAL: tsc
+          DOCS_EXTERNAL: tsc,fair-beacon
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
