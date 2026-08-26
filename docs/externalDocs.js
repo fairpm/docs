@@ -17,6 +17,16 @@ const externalDocs = [
         sidebarPath: './sidebars-tsc.js',
         editUrl: 'https://github.com/fairpm/tsc/blob/main/faqs/',
     },
+    {
+        id: 'fair-beacon',
+        label: 'Fair Beacon',
+        path: 'external/fair-beacon/',
+        routeBasePath: 'fair-beacon',
+        navbarPosition: 'left',
+        sidebarId: 'fairBeaconSidebar',
+        sidebarPath: './sidebars-fair-beacon.js',
+        editUrl: 'https://github.com/fairpm/fair-beacon/',
+    },
 ];
 
 const enabledDocs = externalDocs.filter((docs) =>
