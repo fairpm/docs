@@ -17,6 +17,27 @@ const externalDocs = [
         sidebarPath: './sidebars-tsc.js',
         editUrl: 'https://github.com/fairpm/tsc/blob/main/faqs/',
     },
+    {
+        id: 'fair-protocol',
+        label: 'FAIR Protocol',
+        path: 'external/fair-protocol/',
+        routeBasePath: 'fair-protocol',
+        navbarPosition: 'left',
+        sidebarId: 'fairProtocolSidebar',
+        sidebarPath: './sidebars-fair-protocol.js',
+        exclude: ['CLAUDE.md'],
+        editUrl: 'https://github.com/fairpm/fair-protocol/',
+    },
+    {
+        id: 'fair-beacon',
+        label: 'Fair Beacon',
+        path: 'external/fair-beacon/',
+        routeBasePath: 'fair-beacon',
+        navbarPosition: 'left',
+        sidebarId: 'fairBeaconSidebar',
+        sidebarPath: './sidebars-fair-beacon.js',
+        editUrl: 'https://github.com/fairpm/fair-beacon/',
+    },
 ];
 
 const enabledDocs = externalDocs.filter((docs) =>
