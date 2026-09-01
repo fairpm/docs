@@ -25,6 +25,7 @@ const externalDocs = [
         navbarPosition: 'left',
         sidebarId: 'fairProtocolSidebar',
         sidebarPath: './sidebars-fair-protocol.js',
+        exclude: ['CLAUDE.md'],
         editUrl: 'https://github.com/fairpm/fair-protocol/',
     },
     {
