@@ -9,6 +9,17 @@ import enabledDocs from './externalDocs.js';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const externalNavbarItem = (id) =>
+  enabledDocs
+    .filter((docs) => docs.id === id)
+    .map((docs) => ({
+      type: 'docSidebar',
+      sidebarId: docs.sidebarId,
+      docsPluginId: docs.id,
+      position: docs.navbarPosition,
+      label: docs.label,
+    }));
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'FAIR Documentation',
@@ -83,22 +94,25 @@ const config = {
         //   src: 'img/logo.svg',
         // },
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Docs',
-          },
-          {
-            to: '/blog',
-            label: 'Blog',
-            position: 'left'
-          },
+          ...externalNavbarItem('fair-protocol'),
+          ...externalNavbarItem('tsc'),
+          ...externalNavbarItem('fair-beacon'),
           {
             to: 'docs/contributing',
             label: 'Get involved',
             position: 'left'
           },
+          // {
+          //   to: '/blog',
+          //   label: 'Blog',
+          //   position: 'left'
+          // },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Docs',
+          // },
           {
             href: 'https://github.com/fairpm/docs',
             label: 'GitHub',
@@ -109,14 +123,7 @@ const config = {
             label: 'fair.pm',
             position: 'right',
           },
-          ...enabledDocs.map((docs) => ({
-            type: 'docSidebar',
-            sidebarId: docs.sidebarId,
-            docsPluginId: docs.id,
-            position: docs.navbarPosition,
-            label: docs.label,
-          })),
-      ],
+        ],
       },
       footer: {
         style: 'dark',
@@ -186,7 +193,7 @@ const config = {
           routeBasePath: docs.routeBasePath,
           sidebarPath: require.resolve(docs.sidebarPath),
           editUrl: ({docPath}) =>
-            `docs.editUrl${docPath}`,
+            `${docs.editUrl}${docPath}`,
         },
       ]),
     ],

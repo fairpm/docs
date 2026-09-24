@@ -17,6 +17,8 @@ mkdir -p "$EXTERNAL_DIR"
 # id must match the id used in docusaurus.config.js / DOCS_EXTERNAL
 REPOS=(
   "tsc|TSC|fairpm/tsc|external/tsc"
+  "fair-protocol|FAIR Protocol|fairpm/fair-protocol|external/fair-protocol"
+  "fair-beacon|Fair Beacon|fairpm/fair-beacon|external/fair-beacon"
 )
 
 USE_ALL=false
