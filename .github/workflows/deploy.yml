@@ -53,7 +53,7 @@ jobs:
 
       - name: Build website
         run: npm run fair-build-all
-        env:
+        # env:
           # DOCS_EXTERNAL: fair-protocol,tsc,fair-beacon
           # DOCS_EXTERNAL: tsc,fair-beacon
 
